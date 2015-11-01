@@ -1,3 +1,16 @@
+
+// It is important that generated/vendor-bundle must be before bootstrap since it is
+// exposing jQuery and jQuery-ujs.
+// DO NOT REQUIRE jQuery or jQuery-ujs in this file!
+// DO NOT REQUIRE TREE!
+// Must be on top
+//= require react_on_rails
+
+//= require generated/vendor-bundle
+//= require generated/app-bundle
+
+//= require bootstrap-sprockets
+
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -10,7 +23,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
+
+
 //= require turbolinks
-//= require_tree .
+
