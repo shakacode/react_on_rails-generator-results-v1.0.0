@@ -1,0 +1,18 @@
+// This file is used as part of the bootstrap-sass-loader customization
+// Included from bootstrap-sass.config.js
+// Use it to apply styles that need to go BEFORE bootstrap has loaded
+
+$rails: false !default;
+// defaults to false (e.g. webpack environment)
+
+// Sass 3 removes image-url helper
+// https://github.com/sass/libsass/issues/489
+$image-url-path: '/assets/images/' !default;
+
+@function img-url($image) {
+  @if $rails {
+    @return image-url($image);
+  } @else {
+    @return url('#{$image-url-path}#{$image}');
+  }
+}
