@@ -9,3 +9,7 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+# Add client/assets/stylesheets to asset pipeline's search path.
+Rails.application.config.assets.paths << Rails.root.join("client", "assets", "stylesheets")
+
+Rails.application.config.assets.precompile += %w( generated/server-bundle.js )
