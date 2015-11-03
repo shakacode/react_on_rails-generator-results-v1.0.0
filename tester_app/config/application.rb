@@ -8,6 +8,10 @@ Bundler.require(*Rails.groups)
 
 module TesterApp
   class Application < Rails::Application
+    
+# Add client/assets/stylesheets to asset pipeline's search path.
+config.assets.paths << Rails.root.join("client", "assets", "stylesheets")
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
