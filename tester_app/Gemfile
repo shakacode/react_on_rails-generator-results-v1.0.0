@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+
 
 gem 'react_on_rails', path: '../../react_on_rails'
 gem 'therubyracer'
